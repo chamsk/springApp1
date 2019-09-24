@@ -8,33 +8,34 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
+    <context:component-scan base-package="ru.chams.springcources"/>
     <context:property-placeholder location="musicPlayer.properties"/>
 
-    <bean id="classicalMusic"
-          class="ru.chams.springcources.ClassicalMusic">
-    </bean>
-    <bean id="rapMusic"
-          class="ru.chams.springcources.RapMusic">
-    </bean>
-    <bean id="rockMusic"
-          class="ru.chams.springcources.RockMusic">
-    </bean>
+    <!--<bean id="classicalMusic"-->
+          <!--class="ru.chams.springcources.ClassicalMusic">-->
+    <!--</bean>-->
+    <!--<bean id="rapMusic"-->
+          <!--class="ru.chams.springcources.RapMusic">-->
+    <!--</bean>-->
+    <!--<bean id="rockMusic"-->
+          <!--class="ru.chams.springcources.RockMusic">-->
+    <!--</bean>-->
 
-    <bean id = "musicPlayer"
-    class="ru.chams.springcources.MusicPlayer"
-    scope="prototype"> 
-        <property name="musicList">
-        <list>
-            <ref bean="classicalMusic"></ref>
-            <ref bean="rockMusic"></ref>
-            <ref bean="rapMusic"></ref>
-        </list>
-        </property>
-        <!--<property name="name" value="Aimp"/>-->
-        <!--<property name="volume" value="22"/>-->
+    <!--<bean id = "musicPlayer"-->
+    <!--class="ru.chams.springcources.MusicPlayer"-->
+    <!--scope="prototype">-->
+        <!--<property name="musicList">-->
+        <!--<list>-->
+            <!--<ref bean="classicalMusic"></ref>-->
+            <!--<ref bean="rockMusic"></ref>-->
+            <!--<ref bean="rapMusic"></ref>-->
+        <!--</list>-->
+        <!--</property>-->
+        <!--&lt;!&ndash;<property name="name" value="Aimp"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="volume" value="22"/>&ndash;&gt;-->
 
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volue}"/>
-    </bean>
+        <!--<property name="name" value="${musicPlayer.name}"/>-->
+        <!--<property name="volume" value="${musicPlayer.volue}"/>-->
+    <!--</bean>-->
 
 </beans>
